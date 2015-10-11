@@ -4,12 +4,16 @@ Create iplist.csv file see example below
 
 1,systemname1,loginuserroot,port,192.168.0.3
 2,best,root,22,192.168.0.1
+3. To have coloref dispaly instal 
+pip and install termcoclor module 
 
+sudo apt-get install python-pip
+sudo pip install termcolor
 """
 
 
 import sys, os
-
+from termcolor import colored
 # VARIABLES
 file_name = 'iplist.csv'
 
@@ -18,8 +22,9 @@ file_name = 'iplist.csv'
 def read_file():
 	file = open(file_name)
 	for line in file:
-		print line
-
+		if line[:1] != "#":
+			print colored(line, 'green')
+			print colored('------------------------------------------', 'red')
 def start_ssh_connection(my_choice):
 	file = open(file_name)
 	for line in file:
