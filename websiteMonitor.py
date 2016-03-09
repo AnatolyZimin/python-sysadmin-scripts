@@ -4,7 +4,7 @@ import httplib
 
 # loope over sites and if anython but 200 or 301 shows sound alarm
 
-for site_name in ["prolinuxhub.com", "www.tekyhost.com", "bjkhhlkhlkr.test"]:
+for site_name in ["prolinudfghdfhgdfhgdfhxhub.com", "www.dgdfhdfhdfhyhost.com", "bjkhhlkhlkr.test"]:
     try:
         conn = httplib.HTTPConnection(site_name)
         conn.request("HEAD", "/")
